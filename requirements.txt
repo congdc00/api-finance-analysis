@@ -2,3 +2,6 @@ runpod
 loguru
 pillow
 boto3
+requests 
+python-dotenv
+openai==0.28
