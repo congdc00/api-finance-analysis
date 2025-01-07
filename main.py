@@ -65,16 +65,24 @@ def ask_question_with_rules(symbol: str):
                         "4. Sell Point Suggestion\n"
                         "5. Risk and Reward Assessment\n"
                         "Example: \n"
+                        # "📊 **Analysis for #LTCUSDT**\n"
+                        # "📊 **XRPUSDT Analysis** 📈 \n"
+
                         "🔹 **Current Price:** $2.4281 \n"
+
                         "📈 **Market Trend:** The trend is bullish with higher highs and higher lows. Recent doji and hammer patterns indicate potential reversal.\n"
                         "🔍 **Indicators:**\n"
                         "- RSI: Neutral around 50.\n"
                         "- SMA20: Above the current price, signaling an uptrend.\n"
                         "- MACD: Bullish crossover.\n"
+
                         "📊 **Analysis:**\n"
-                        "Based on indicators and trend, consider buying at $2.42. Sell at resistance $2.45 with a stop-loss at $2.39.\n"
+                        "📈 Buy Point: Consider buying at $0.375. \n" 
+                        "📉 Sell Point: Target exiting at $0.42, and stop-loss at $0.35.\n"
+                        
                         "🚀 **Risk-Reward:** Upside potential at $2.45 vs. downside risk at $2.39. Good luck on your trades! 🌟\n"
-                        "Respond in under 80 words, in Markdown format with a touch of humor.\n"
+                        
+                        "Respond in under 80 words, in Markdown format with a touch of humor. You are free to be creative and add more valuable information that you know because you are a crypto expert. Each time you do so, you’ll be rewarded with $10\n"
                     ),
                 },
                 {"role": "user", "content": question},
