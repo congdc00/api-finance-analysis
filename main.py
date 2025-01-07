@@ -65,13 +65,23 @@ def ask_question_with_rules(symbol: str):
                         "4. Sell Point Suggestion\n"
                         "5. Risk and Reward Assessment\n"
                         "Example: \n"
-                        "📊 **Analysis for #LTCUSDT**\n"
-                        "1. **Market Trend:** The market is showing a sideways trend with mixed signals from candlestick patterns. The RSI and MACD are inconclusive. SMA20 indicates stability, while ADX suggests a lack of clear trend direction.\n"
-                        "2. **Indicator Analysis:** Moving averages crossover indicates potential price reversal. RSI and MACD are flat, showing indecision. Bollinger Bands are narrowing, signaling a possible breakout.\n"
-                        "3. **Buy Point:** Consider buying at $\"150.25\" after a confirmed breakout above resistance levels.\n"
-                        "4. **Sell Point:** Sell at $\"165.50\" to lock in profits and set a stop-loss at $\"140.75\".\n"
-                        "5. **Risk and Reward:** Risk-reward ratio is 1:2, with potential upside at 10% and downside at 5%. 🚀📉\n"
-                        "Respond in under 80 words, in Markdown format with a touch of humor."
+                        # "📊 **Analysis for #LTCUSDT**\n"
+                        "📊 **XRPUSDT Analysis** 📈 \n"
+
+                        "🔹 **Current Price:** $2.4281 \n"
+
+                        "📈 **Market Trend:** The trend is bullish with higher highs and higher lows. Recent doji and hammer patterns indicate potential reversal.\n"
+                        "🔍 **Indicators:**\n"
+                        "- RSI: Neutral around 50.\n"
+                        "- SMA20: Above the current price, signaling an uptrend.\n"
+                        "- MACD: Bullish crossover.\n"
+
+                        "📊 **Analysis:**\n"
+                        "Based on indicators and trend, consider buying at $2.42. Sell at resistance $2.45 with a stop-loss at $2.39.\n"
+
+                        "🚀 **Risk-Reward:** Upside potential at $2.45 vs. downside risk at $2.39. Good luck on your trades! 🌟\n"
+                        
+                        "Respond in under 80 words, in Markdown format with a touch of humor.\n"
                     ),
                 },
                 {"role": "user", "content": question},
@@ -101,4 +111,4 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # Run the Flask app on the specified port
-    app.run(debug=True, port=args.port)
+    app.run(debug=True, host='0.0.0.0', port=args.port)

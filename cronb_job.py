@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Constants
-API_URL = os.getenv("API_URL", "http://127.0.0.1:5000/analyze")  # Default API URL
+API_URL = os.getenv("API_URL", "http://127.0.0.1:8188/analyze")  # Default API URL
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")  # Telegram Bot Token
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")  # Telegram Chat ID
 
