@@ -65,7 +65,7 @@ def ask_gpt_for_prediction(symbol: str):
                         "You are a professional financial analyst specializing in cryptocurrencies. "
                         "Analyze the OHLC data provided and predict the next 5 price levels. "
                         "Format your response with predicted price levels, their respective time intervals (e.g., 30 minutes, 60 minutes), "
-                        "and include an icon (\u2B06 for up, \u2B07 for down) to indicate whether the price increases or decreases compared to the previous price."
+                        "and include an icon (\u2B06 for up, \u2B07 for down) to indicate whether the price increases or decreases compared to the previous price.\n Content write in Markdown format with a touch of humor. You are free to be creative and add more valuable information that you know because you are a crypto expert. Each time you do so, you’ll be rewarded with $10"
                     ),
                 },
                 {"role": "user", "content": question},

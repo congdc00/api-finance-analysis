@@ -7,7 +7,7 @@ import time
 load_dotenv()
 
 # Constants
-API_URL = os.getenv("API_URL", "http://127.0.0.1:8288/analyze")  # Default API URL
+API_URL = os.getenv("API_URL", "http://127.0.0.1:8288/predict")  # Default API URL
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")  # Telegram Bot Token
 TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")  # Telegram Chat ID
 
@@ -78,6 +78,6 @@ if __name__ == "__main__":
             print(f"Error in analysis: {analysis['error']}")
         else:
             # Prepare the message and send it to Telegram
-            message = f"📊 **Analysis for {random_pair}**\n{analysis['analysis']}"
+            message = f"🦄 **Predict price for {random_pair}**\n{analysis['predictions']}"
             send_message_to_telegram(message)
         time.sleep(7200)
