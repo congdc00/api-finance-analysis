@@ -2,7 +2,7 @@ import os
 import requests
 import random
 from dotenv import load_dotenv
-
+import time
 # Load environment variables from .env file
 load_dotenv()
 
@@ -64,15 +64,20 @@ def send_message_to_telegram(message):
 
 # Main function
 if __name__ == "__main__":
-    # Select a random trading pair
-    random_pair = get_random_pair()
-    print(f"Selected trading pair: {random_pair}")
+    
+    # schedule sending messages to Telegram every 2 hours 
 
-    # Fetch analysis from the API
-    analysis = get_analysis_from_api(random_pair)
-    if "error" in analysis:
-        print(f"Error in analysis: {analysis['error']}")
-    else:
-        # Prepare the message and send it to Telegram
-        message = f"📊 **Analysis for {random_pair}**\n{analysis['analysis']}"
-        send_message_to_telegram(message)
+    
+    while True:
+        random_pair = get_random_pair()
+        print(f"Selected trading pair: {random_pair}")
+
+        # Fetch analysis from the API
+        analysis = get_analysis_from_api(random_pair)
+        if "error" in analysis:
+            print(f"Error in analysis: {analysis['error']}")
+        else:
+            # Prepare the message and send it to Telegram
+            message = f"📊 **Analysis for {random_pair}**\n{analysis['analysis']}"
+            send_message_to_telegram(message)
+        time.sleep(7200)
