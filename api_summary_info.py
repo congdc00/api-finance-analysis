@@ -108,7 +108,7 @@ def analyze_coin():
 if __name__ == "__main__":
     # Parse port from command line arguments
     parser = argparse.ArgumentParser(description="Run the Flask API server.")
-    parser.add_argument("--port", type=int, default=5000, help="Port to run the server on (default: 5000).")
+    parser.add_argument("--port", type=int, default=8188, help="Port to run the server on (default: 5000).")
     args = parser.parse_args()
 
     # Run the Flask app on the specified port
